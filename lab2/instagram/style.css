@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&family=Ubuntu:wght@300;400;500&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    text-decoration: none;
+}
+
+body{
+    background-color: white;
+    font-family: 'Roboto', sans-serif;
+}
+
+main{
+    display: flex;
+    gap: 100px;
+    min-height: 100vh;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+}
+
+.formDiv{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.formDiv form{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border: 1px solid rgba(128, 128, 128, 0.4);
+    padding: 3vh 2vw;
+}
+
+.formDiv form input{
+    padding: .6rem;
+    border-radius: 8px;
+    border: 1px solid rgba(128, 128, 128, 0.7);
+    margin:3px;
+    width: 90%;
+}
+.formDiv form .logIn{
+    border-radius: 8px; 
+    width: 95%;
+    color:white;
+    background-color: rgb(1, 183, 255);
+    margin: 10px 0px;
+    font-weight: 600;
+    height: 35px;
+}
+
+#or{
+    margin: 20px 0;
+}
+
+#or:before,#or:after{
+    content: '--------------------------';
+    margin: 0px 10px;
+    color: rgba(128, 128, 128, 0.7);
+
+}
+
+.fcBt{
+    margin: 15px 0;
+    margin-bottom: 30px;
+    color:  rgb(1, 183, 255);
+}
+
+.formDiv form .instaLogo{
+    width: 200px;
+    margin: 20px 0;
+}
+
+.signUp{
+    width: 95%;
+    border: 1px solid rgba(128, 128, 128, 0.7);
+    margin: 15px 0;
+    padding: 1.5rem 0;
+    text-align: center;
+}
+
+.get-up{
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+}
+
+.store{
+    display: flex;
+    align-items: center;
+}
+.play{
+    width: 195px;
+}
+.micro{
+    width: 135px;
+}
+
