@@ -1,0 +1,33 @@
+<h2>Products</h2>
+
+<div *ngIf="products.length === 0">
+  <p>No products available.</p>
+</div>
+
+<div *ngIf="products.length > 0" class="product-grid">
+  <div *ngFor="let product of products" class="product-item">
+
+    <!-- Main Image -->
+    <div class="main-image">
+       <img [src]="product.img[product.currentImageIndex]" alt="{{ product.name }}" >
+    </div>
+
+    <!-- Image Navigation -->
+    <div class="image-navigation">
+      <button (click)="previousImage(product)">Previous</button>
+      <button (click)="nextImage(product)">Next</button>
+    </div>
+
+    <h3>{{ product.name }}</h3>
+    <p>{{product.price|number}} tg</p>
+    <p>{{ product.description }}</p>
+    <div class="rating">Rating: {{ product.rating }}</div>
+
+
+    <div class="actions">
+      <button (click)="shareOnWhatsApp(product)">Share on WhatsApp</button>
+      <button (click)="shareOnTelegram(product)">Share on Telegram</button>
+      <a [href]="product.link" target="_blank">View on Kaspi.kz</a>
+    </div>
+  </div>
+</div>
