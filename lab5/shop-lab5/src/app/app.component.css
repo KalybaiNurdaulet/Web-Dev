@@ -1,0 +1,58 @@
+/* Overall Layout */
+:host {
+    display: block; /* Make sure the host element takes up space */
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    background-color: #f8f9fa; /* Light background */
+    padding: 20px;
+  }
+  
+  h1 {
+    text-align: center;
+    color: #007bff; /* Primary blue color */
+    margin-bottom: 20px;
+  }
+  
+  /* Category List */
+  .category-list {
+    margin-bottom: 30px;
+    text-align: center;
+  }
+  
+  .category-list h2 {
+    font-size: 1.5rem;
+    color: #555;
+    margin-bottom: 15px;
+  }
+  
+  .category-list ul {
+    list-style: none;
+    padding: 0;
+    display: inline-block; /* Center the list */
+  }
+  
+  .category-list li {
+    margin: 0 10px;
+    display: inline-block;
+  }
+  
+  .category-list button {
+    padding: 10px 20px;
+    cursor: pointer;
+    border: none;
+    background-color: #007bff; /* Blue buttons */
+    color: white;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: background-color 0.2s ease-in-out;
+  }
+  
+  .category-list button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+  }
+  
+  /* Router Outlet */
+  router-outlet {
+    display: block;
+    margin-top: 20px;
+  }

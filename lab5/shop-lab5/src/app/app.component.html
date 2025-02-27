@@ -1,0 +1,14 @@
+<h1>{{ title }}</h1>
+
+<div class="category-list">
+  <h2>Categories</h2>
+  <ul>
+    @for (category of categories; track category.id) {
+      <li>
+        <button (click)="onCategorySelect(category)">{{ category.name }}</button>
+      </li>
+    }
+  </ul>
+</div>
+
+<router-outlet></router-outlet>

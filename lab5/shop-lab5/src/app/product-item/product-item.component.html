@@ -1,0 +1,24 @@
+<div class="product-item">
+
+    <!-- Image Slider -->
+    <div class="image-slider">
+      <button (click)="previousImage()" class="slider-button">Previous</button>
+      <div class="main-image">
+        <img [src]="product!.img[product!.currentImageIndex]" alt="{{ product!.name }}">
+      </div>
+      <button (click)="nextImage()" class="slider-button">Next</button>
+    </div>
+  
+    <h3>{{ product!.name }}</h3>
+    <p>{{ product!.description }}</p>
+    <div class="rating">Rating: {{ product!.rating }}</div>
+    <div class="likes">Likes: {{ product!.likes }}</div>
+  
+    <!-- Display the Price -->
+    <div class="price">Price: {{ product!.price}} KZT</div>
+  
+    <div class="actions">
+      <button (click)="likeProduct()">Like</button>
+      <a [href]="product!.link" target="_blank">View on Kaspi.kz</a>
+    </div>
+  </div>
