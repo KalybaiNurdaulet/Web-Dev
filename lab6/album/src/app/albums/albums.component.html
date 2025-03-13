@@ -1,0 +1,19 @@
+<h1>Albums</h1>
+
+<button (click)="startCreateNewAlbum()">Add Album</button>
+
+<div *ngIf="creatingNewAlbum">
+    <input type="text" [(ngModel)]="newAlbumTitle" placeholder="Album Title">
+    <button (click)="createNewAlbum()">Create</button>
+    <button (click)="cancelCreateNewAlbum()">Cancel</button>
+</div>
+
+<ul>
+    <li *ngFor="let album of albums" >
+        <ng-container *ngIf="!album.isHidden">
+          <a (click)="goToDetail(album.id)" style="cursor: pointer;">{{ album.title }}</a>
+          <span *ngIf="album.isTemporary" style="color: gray;"> (Temporary)</span>
+          <button (click)="hideAlbum(album.id)">Delete</button>
+        </ng-container>
+      </li>
+</ul>

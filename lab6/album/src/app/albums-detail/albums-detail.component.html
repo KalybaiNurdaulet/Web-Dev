@@ -1,0 +1,14 @@
+<!-- album-detail.component.html -->
+<div *ngIf="album">
+    <h1>Album Detail</h1>
+    <p>ID: {{ album.id }}</p>
+  
+    <label>
+      Title:
+      <input type="text" [(ngModel)]="albumTitle">
+    </label>
+  
+    <button (click)="saveAlbum()">Save</button>
+    <button (click)="goBack()">Return</button>
+    <button (click)="goToPhotos()">Photos</button>
+  </div>

@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { Product, products } from '../product';
-import { CommonModule } from '@angular/common';  // Import CommonModule
+import { CommonModule } from '@angular/common';  
 
 @Component({
   selector: 'app-products',
-  standalone: true,          // Crucial:  Must be standalone
-  imports: [CommonModule],   // Crucial: Import CommonModule
+  standalone: true,          
+  imports: [CommonModule],   
   templateUrl: './products.component.html',
   styleUrls: ['./products.component.css']
 })

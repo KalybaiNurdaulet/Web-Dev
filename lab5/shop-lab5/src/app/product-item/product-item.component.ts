@@ -11,18 +11,29 @@ import { ProductService } from '../product.service';
 export class ProductItemComponent {
   @Input() product: Product | null = null;
 
-  constructor(private productService: ProductService) {}
+  constructor(private productService: ProductService) { }
 
   likeProduct(): void {
     if (this.product) {
-      const newLikes = this.product.likes + 1;
+      // localStorage.setItem(this.product.id.toString(), this.product.likes.toString())
+      const newLikes = 1;
       this.productService.updateLikes(this.product, newLikes).subscribe(updatedProduct => {
         this.product!.likes = updatedProduct.likes;
       });
     }
   }
 
-  // Image navigation functions
+  dislike(): void {
+    if (this.product) {
+      // localStorage.setItem(this.product.id.toString(), this.product.likes.toString())
+      const newLikes = 0;
+      this.productService.updateLikes(this.product, newLikes).subscribe(updatedProduct => {
+        this.product!.likes = updatedProduct.likes;
+      });
+    }
+  }
+
+
   previousImage(): void {
     if (this.product) {
       this.product.currentImageIndex = (this.product.currentImageIndex - 1 + this.product.img.length) % this.product.img.length;

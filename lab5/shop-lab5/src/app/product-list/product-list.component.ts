@@ -20,7 +20,7 @@ export class ProductListComponent implements OnInit {
 
   ngOnInit(): void {
     this.route.params.subscribe(params => {
-      const categoryId = +params['categoryId']; // Convert string to number
+      const categoryId = +params['categoryId']; 
       this.selectedCategory = categoryId;
       this.loadProducts();
     });
