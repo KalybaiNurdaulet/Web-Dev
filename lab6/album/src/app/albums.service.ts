@@ -9,8 +9,8 @@ import { Album, Photo } from './albums.model';
 })
 export class AlbumsService {
 
-  private baseUrl = 'https://jsonplaceholder.typicode.com'; // Replace with your API
-
+  private baseUrl = 'https://jsonplaceholder.typicode.com'; 
+  
   constructor(private http: HttpClient) { }
   
 
